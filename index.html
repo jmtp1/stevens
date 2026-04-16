@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jordan Store</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+    <img src="img/logo.png">
+</div>
+
+<header class="header" id="header">
+    <div class="logo-container">
+        <img src="img/logo.png" class="logo">
+        <h1>JORDAN</h1>
+    </div>
+
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="carrito-icono" onclick="toggleCarrito()">🛒 <span id="contador">0</span></div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-overlay">
+        <img src="img/logo.png" class="hero-logo">
+        <h2>FEEL THE FLIGHT</h2>
+        <p>Diseño. Exclusividad. Identidad.</p>
+        <button class="btn" onclick="scrollProductos()">Explorar</button>
+    </div>
+</section>
+
+<!-- PRODUCTOS -->
+<section id="productos" class="productos">
+    <h2 class="reveal">COLECCIÓN</h2>
+
+    <div class="grid">
+
+        <div class="card reveal"><img src="img/gorra1.jpg"><h3>Gorra 1</h3><p>$120.000</p><button class="btn" onclick="agregarCarrito('Gorra 1',120000)">Agregar</button></div>
+        <div class="card reveal"><img src="img/gorra2.jpg"><h3>Gorra 2</h3><p>$120.000</p><button class="btn" onclick="agregarCarrito('Gorra 2',120000)">Agregar</button></div>
+        <div class="card reveal"><img src="img/gorra3.jpg"><h3>Gorra 3</h3><p>$120.000</p><button class="btn" onclick="agregarCarrito('Gorra 3',120000)">Agregar</button></div>
+        <div class="card reveal"><img src="img/gorra4.jpg"><h3>Gorra 4</h3><p>$120.000</p><button class="btn" onclick="agregarCarrito('Gorra 4',120000)">Agregar</button></div>
+        <div class="card reveal"><img src="img/gorra5.jpg"><h3>Gorra 5</h3><p>$120.000</p><button class="btn" onclick="agregarCarrito('Gorra 5',120000)">Agregar</button></div>
+        <div class="card reveal"><img src="img/gorra6.jpg"><h3>Gorra 6</h3><p>$120.000</p><button class="btn" onclick="agregarCarrito('Gorra 6',120000)">Agregar</button></div>
+        <div class="card reveal"><img src="img/gorra7.jpg"><h3>Gorra 7</h3><p>$120.000</p><button class="btn" onclick="agregarCarrito('Gorra 7',120000)">Agregar</button></div>
+        <div class="card reveal"><img src="img/gorra8.jpg"><h3>Gorra 8</h3><p>$120.000</p><button class="btn" onclick="agregarCarrito('Gorra 8',120000)">Agregar</button></div>
+        <div class="card reveal"><img src="img/gorra9.jpg"><h3>Gorra 9</h3><p>$120.000</p><button class="btn" onclick="agregarCarrito('Gorra 9',120000)">Agregar</button></div>
+
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="contacto">
+    <h2>Compra directa</h2>
+    <a href="https://wa.me/573137789182?text=Hola%20quiero%20comprar" target="_blank" class="btn">
+        Comprar por WhatsApp
+    </a>
+</section>
+
+<!-- BOTÓN FLOTANTE -->
+<a href="https://wa.me/573137789182?text=Hola%20quiero%20información" 
+   class="whatsapp-float" target="_blank">
+    💬
+</a>
+
+<!-- CARRITO -->
+<div id="carrito" class="carrito">
+    <h2>Carrito</h2>
+    <ul id="lista-carrito"></ul>
+    <p>Total: $<span id="total">0</span></p>
+    <button class="btn" onclick="enviarWhatsApp()">Finalizar compra</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
